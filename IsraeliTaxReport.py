@@ -8,7 +8,6 @@ import pandas as pd
 from currency_converter import CurrencyConverter, ECB_URL  # https://pypi.org/project/CurrencyConverter/
 
 
-# noinspection SpellCheckingInspection
 class IsraeliTaxReport:
     """
     This class is intended to assist with filling out an Israeli annual tax report for Israelis 
@@ -95,38 +94,6 @@ class IsraeliTaxReport:
         ustax_paid = self.get_from_csv(csv_name=self.csv_name,
                                       match=[self.keywords['US tax paid']], 
                                       exclude=[self.keywords['cash report']])
-        # data frame of all US tax deductions
-        self.ustax_paid_df = pd.DataFrame(ustax_paid[1:], columns=ustax_paid[0])
-
-    def __init__(self, csv_name=None):
-        # input .csv file name. This is the file provided by the broker
-        self.csv_name = csv_name
-        # all trade rows in input .csv file
-        trades = self.get_from_csv(csv_name=self.csv_name,
-                                   match=[self.keywords['trades']],
-                                   exclude=[])
-        # data frame of all trades
-        self.trades_df = pd.DataFrame(trades[1:], columns=trades[0])
-        # data frame of all individual stock trades (buy or sell)
-        self.stocks_df = self.trades_df.loc[
-            (self.trades_df[self.keywords['asset type']] == self.keywords['stocks'])
-            & (self.trades_df[self.keywords['data type']] == self.keywords['order'])]
-        # data frame of all individual stock SELLS
-        self.stock_sells_df = self.stocks_df.loc[
-            self.trades_df[self.keywords['quantity']] < str(0)].sort_values(by=self.keywords['date'])
-        # data frame of all individual stock BUYS
-        self.stock_buys_df = self.stocks_df.loc[
-            self.trades_df[self.keywords['quantity']] > str(0)].sort_values(by=self.keywords['date'])
-        # all dividend rows in input .csv file
-        dividends = self.get_from_csv(csv_name=self.csv_name,
-                                      match=[self.keywords['dividends']],
-                                      exclude=[self.keywords['cash report']])
-        # data frame of all individual dividend payments
-        self.dividends_df = pd.DataFrame(dividends[1:], columns=dividends[0])
-        # all US taxes paid in input .csv file
-        ustax_paid = self.get_from_csv(csv_name=self.csv_name,
-                                       match=[self.keywords['US tax paid']],
-                                       exclude=[self.keywords['cash report']])
         # data frame of all US tax deductions
         self.ustax_paid_df = pd.DataFrame(ustax_paid[1:], columns=ustax_paid[0])
 
