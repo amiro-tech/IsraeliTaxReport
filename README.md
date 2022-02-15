@@ -1,4 +1,5 @@
-# IsraeliTaxReport
+# Instruction for using the IsraeliTaxReport class
+
 ### [1] Obtain the raw report from Interactive Brokers as a .csv file:
 * On your Interactive Brokers page, go to **Performance & Statements** and under **Reports**, choose **Statements**
 
@@ -14,4 +15,5 @@
 
 * **Section Configurations** can be left as the default.
 * **Delivery Configurations** - choose Format: CSV, Period: Daily, Language: English.
+* Now you can run the statement, which is saved under **Custom Statements**.
 
