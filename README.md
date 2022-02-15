@@ -70,3 +70,4 @@ report.keywords = {'trades': 'Trades',
               'cash report': 'Cash Report',
                    'amount': 'Amount'}
 ```
+The [Currency Converter](https://pypi.org/project/CurrencyConverter/) is used for conversion between USD and ILS. ```report.converter``` is an instance of this class.
