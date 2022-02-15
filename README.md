@@ -54,7 +54,7 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ![](imagesForREADME/image4.png)
 
 ### [4] Attributes:
-The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
+* The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
 report.keywords = {'trades': 'Trades',
                    'stocks': 'Stocks',
@@ -70,4 +70,4 @@ report.keywords = {'trades': 'Trades',
               'cash report': 'Cash Report',
                    'amount': 'Amount'}
 ```
-The [Currency Converter](https://pypi.org/project/CurrencyConverter/) is used for conversion between USD and ILS. ```report.converter``` is an instance of this class.
+* The [Currency Converter](https://pypi.org/project/CurrencyConverter/) is used for conversion between USD and ILS. ```report.converter``` is an instance of this class.
