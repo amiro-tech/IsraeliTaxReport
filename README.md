@@ -78,6 +78,11 @@ report.keywords = {'trades': 'Trades',
                    'amount': 'Amount'}
 ```
 
+* The columns of form 1325 are also defined within a dictionary ```form1325dict```:
+```Python
+
+```
+
 * The [Currency Converter](https://pypi.org/project/CurrencyConverter/) is used for conversion between USD and ILS. ```report.converter``` is an instance of this class.
 
 * By default, ```report.forex = 'USD'``` and ```report.base_currency = 'ILS'```.
