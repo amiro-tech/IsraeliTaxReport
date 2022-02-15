@@ -27,47 +27,80 @@ class IsraeliTaxReport:
 
     See the README.md page for more details and how to provide a proper input .csv file.
     """
+    # CLASS VARIABLES
+    # key words in .csv (below for Interactive Broker report):
+    keywords = {'trades': 'Trades',
+                     'stocks': 'Stocks',
+                  'dividends': 'Dividends',
+                       'date': 'Date/Time',
+                     'symbol': 'Symbol',
+                   'quantity': 'Quantity',
+                      'basis': 'Basis',
+                 'asset type': 'Asset Category',
+                  'data type': 'DataDiscriminator',
+                'US tax paid': 'Withholding Tax',
+                      'order': 'Order',
+                'cash report': 'Cash Report',
+                     'amount': 'Amount'}
+    # columns dictionary of output form '1325' (for Israeli tax report)
+    form1325dict = {'מספר': [],
+                    'זיהוי מלא של נייר הערך שנמכר לפי הסדר הכרונולוגי של המכירות': [],
+                    'נרכש טרם הרישום למסחר': [],
+                    'Quantity': [], 
+                    'ערך נקוב במכירה': [],
+                    'תאריך הרכישה': [],
+                    'Cost in USD': [],
+                    'מחיר מקורי': [],
+                    '1 + שיעור עליית המדד': [],
+                    'מחיר מתואם': [],
+                    'תאריך המכירה': [],
+                    'תמורה': [],
+                    'רווח הון ריאלי בשיעור מס של 25%': [],
+                    'הפסד הון': []}
+    # instantiate Currency Converter (https://pypi.org/project/CurrencyConverter/)
+    converter = CurrencyConverter(ECB_URL, 
+                                  fallback_on_missing_rate=True,
+                                  fallback_on_missing_rate_method="last_known")
+    # foreign currency symbol
+    forex = 'USD'
+    # native currency symbol
+    base_currency = 'ILS'
+    
+    def __init__(self, csv_name=None):
+        # input .csv file name. This is the file provided by the broker
+        self.csv_name = csv_name
+        # all trade rows in input .csv file
+        trades = self.get_from_csv(csv_name=self.csv_name, 
+                                   match=[self.keywords['trades']], 
+                                   exclude=[])
+        # data frame of all trades
+        self.trades_df = pd.DataFrame(trades[1:], columns=trades[0])
+        # data frame of all individual stock trades (buy or sell)
+        self.stocks_df = self.trades_df.loc[
+            (self.trades_df[self.keywords['asset type']] == self.keywords['stocks'])
+            & (self.trades_df[self.keywords['data type']] == self.keywords['order'])]
+        # data frame of all individual stock SELLS
+        self.stock_sells_df = self.stocks_df.loc[
+            self.trades_df[self.keywords['quantity']] < str(0)].sort_values(by=self.keywords['date'])
+        # data frame of all individual stock BUYS
+        self.stock_buys_df = self.stocks_df.loc[
+            self.trades_df[self.keywords['quantity']] > str(0)].sort_values(by=self.keywords['date'])
+        # all dividend rows in input .csv file
+        dividends = self.get_from_csv(csv_name=self.csv_name,
+                                      match=[self.keywords['dividends']], 
+                                      exclude=[self.keywords['cash report']])
+        # data frame of all individual dividend payments
+        self.dividends_df = pd.DataFrame(dividends[1:], columns=dividends[0])
+        # all US taxes paid in input .csv file
+        ustax_paid = self.get_from_csv(csv_name=self.csv_name,
+                                      match=[self.keywords['US tax paid']], 
+                                      exclude=[self.keywords['cash report']])
+        # data frame of all US tax deductions
+        self.ustax_paid_df = pd.DataFrame(ustax_paid[1:], columns=ustax_paid[0])
 
     def __init__(self, csv_name=None):
         # input .csv file name. This is the file provided by the broker
         self.csv_name = csv_name
-        # key words in .csv (below for Interactive Broker report):
-        self.keywords = {'trades': 'Trades',
-                         'stocks': 'Stocks',
-                         'dividends': 'Dividends',
-                         'date': 'Date/Time',
-                         'symbol': 'Symbol',
-                         'quantity': 'Quantity',
-                         'basis': 'Basis',
-                         'asset type': 'Asset Category',
-                         'data type': 'DataDiscriminator',
-                         'US tax paid': 'Withholding Tax',
-                         'order': 'Order',
-                         'cash report': 'Cash Report',
-                         'amount': 'Amount'}
-        # columns dictionary of output form '1325' (for Israeli tax report)
-        self.form1325dict = {'מספר': [],
-                             'זיהוי מלא של נייר הערך שנמכר לפי הסדר הכרונולוגי של המכירות': [],
-                             'נרכש טרם הרישום למסחר': [],
-                             'Quantity': [],
-                             'ערך נקוב במכירה': [],
-                             'תאריך הרכישה': [],
-                             'Cost in USD': [],
-                             'מחיר מקורי': [],
-                             '1 + שיעור עליית המדד': [],
-                             'מחיר מתואם': [],
-                             'תאריך המכירה': [],
-                             'תמורה': [],
-                             'רווח הון ריאלי בשיעור מס של 25%': [],
-                             'הפסד הון': []}
-        # instantiate Currency Converter (https://pypi.org/project/CurrencyConverter/)
-        self.converter = CurrencyConverter(ECB_URL,
-                                           fallback_on_missing_rate=True,
-                                           fallback_on_missing_rate_method="last_known")
-        # foreign currency symbol
-        self.forex = 'USD'
-        # native currency symbol
-        self.base_currency = 'ILS'
         # all trade rows in input .csv file
         trades = self.get_from_csv(csv_name=self.csv_name,
                                    match=[self.keywords['trades']],
