@@ -19,7 +19,7 @@
 
 ### [2] To instantiate the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
 
-```
+```Python
 from IsraeliTaxReport import IsraeliTaxReport
 
 csv_name = 'custom_statement.csv'  # This is the custom statement generated in Interactive Brokers
