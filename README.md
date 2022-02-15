@@ -5,7 +5,7 @@ The main method, 'form1325', outputs the lines of form '1325', which is the main
 
 Most of the attributes are Pandas dataframes. This class is not optimized for speed but for ease of reading and submitting tax report data (typically done once or twice a year).
 
-Read more about submitting the Israeli tax report (in hebrew) [here](https://fintranslator.com/israel-tax-return-example-2019/).
+Read more about submitting the Israeli tax report (in Hebrew) [here](https://fintranslator.com/israel-tax-return-example-2019/).
 
 Requirements:
 ```Python
