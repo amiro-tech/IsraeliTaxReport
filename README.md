@@ -37,7 +37,7 @@ pandas==1.3.5
 ```Python
 from IsraeliTaxReport import IsraeliTaxReport
 
-csv_name = 'custom_statement.csv'  # This is the custom statement generated in Interactive Brokers
+csv_name = 'sample_custom_statement.csv'  # This is the custom statement generated in Interactive Brokers
 report = IsraeliTaxReport(csv_name)
 ```
 
