@@ -23,6 +23,7 @@ Most of the attributes are Pandas dataframes. This class is not optimized for sp
 * **Section Configurations** can be left as the default.
 * **Delivery Configurations** - choose Format: CSV, Period: Daily, Language: English.
 * Now you can run the statement, which is saved under **Custom Statements**.
+* Customs statements on Interactive Brokers can be generated for a maximum period of 1 year. However, this might not be sufficient for the calculation of form '1325' for the tax year of interest, as stocks bought on another year may have been sold. In such a case, you may need to combine several .csv files may to obtain all the data needed. Otherwise, the report will still be generated, but include only partial data. 
 
 ### [2] To instantiate the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
 
