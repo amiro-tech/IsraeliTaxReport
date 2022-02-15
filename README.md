@@ -34,6 +34,7 @@ report = IsraeliTaxReport(csv_name)
 ```
 
 ### [3] The 'form1325' method:
+Applies
 ```Python
 form1325 = report.form1325(year='2021', save_as_csv=True)
 ```
