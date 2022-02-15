@@ -15,7 +15,7 @@ pandas==1.3.5
 ```
 
 ## Instructions for using the IsraeliTaxReport class
-Since most of the class's attributes are visual dataframes, it is recommended to use the class interactively, e.g. in a Jupyter notebook.
+Since most of the attributes are visual dataframes, it is nice to use the class interactively, e.g. in a Jupyter notebook.
 
 ### [1] Obtain the raw report from Interactive Brokers as a .csv file:
 * On your Interactive Brokers page, go to **Performance & Statements** and under **Reports**, choose **Statements**
@@ -60,6 +60,7 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ![](imagesForREADME/image4.png)
 
 ### [4] Attributes:
+#### Class Variables:
 * The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
 report.keywords = {'trades': 'Trades',
@@ -81,6 +82,7 @@ report.keywords = {'trades': 'Trades',
 
 * By default, ```report.forex = 'USD'``` and ```report.base_currency = 'ILS'```.
 
+#### Instance Varibales
 * ```report.trades_df```, ```report.stocks_df```,  ```report.stock_sells_df```, and ```report.stock_buys_df``` are dataframes cotaining all trades, stock trades, stock sell orders, and stock buy orders, respectively. For example, for ```sample_custom_statement.csv```, the output dataframe of ```report.stock_sells_df``` is
 
 ![](imagesForREADME/image5.png)
