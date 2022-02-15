@@ -3,3 +3,6 @@
 * On your Interactive Brokers page, go to **Reports**
 
 ![](imagesForREADME/image1.png)
+
+* Create a **Custom Report**
+
