@@ -5,7 +5,7 @@ The main method, 'form1325', outputs the lines of form '1325', which is the main
 
 Most of the attributes are Pandas dataframes. This class is not optimized for speed but for ease of reading and submitting tax report data (typically done once or twice a year).
 
-## Instruction for using the IsraeliTaxReport class
+## Instructions for using the IsraeliTaxReport class
 
 ### [1] Obtain the raw report from Interactive Brokers as a .csv file:
 * On your Interactive Brokers page, go to **Performance & Statements** and under **Reports**, choose **Statements**
