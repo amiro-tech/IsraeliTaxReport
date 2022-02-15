@@ -84,7 +84,7 @@ report.keywords = {'trades': 'Trades',
 
 * By default, ```report.forex = 'USD'``` and ```report.base_currency = 'ILS'```.
 
-#### Instance Varibales
+#### Instance Variables
 * ```report.trades_df```, ```report.stocks_df```,  ```report.stock_sells_df```, and ```report.stock_buys_df``` are dataframes cotaining all trades, stock trades, stock sell orders, and stock buy orders, respectively. For example, for ```sample_custom_statement.csv```, the output dataframe of ```report.stock_sells_df``` is
 
 ![](imagesForREADME/image5.png)
