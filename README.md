@@ -57,16 +57,16 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
 report.keywords = {'trades': 'Trades',
-                 'stocks': 'Stocks',
-              'dividends': 'Dividends',
-                   'date': 'Date/Time',
-                 'symbol': 'Symbol',
-               'quantity': 'Quantity',
-                  'basis': 'Basis',
-             'asset type': 'Asset Category',
-              'data type': 'DataDiscriminator',
-            'US tax paid': 'Withholding Tax',
-                  'order': 'Order',
-            'cash report': 'Cash Report',
-                 'amount': 'Amount'}
+                   'stocks': 'Stocks',
+                'dividends': 'Dividends',
+                     'date': 'Date/Time',
+                   'symbol': 'Symbol',
+                 'quantity': 'Quantity',
+                    'basis': 'Basis',
+               'asset type': 'Asset Category',
+                'data type': 'DataDiscriminator',
+              'US tax paid': 'Withholding Tax',
+                    'order': 'Order',
+              'cash report': 'Cash Report',
+                   'amount': 'Amount'}
 ```
