@@ -9,7 +9,7 @@ Read more about submitting the Israeli tax report (in Hebrew) [here](https://fin
 
 #### Requirements:
 ```Python
-currency_converter==0.5.5
+currency_converter==0.5.5  # https://pypi.org/project/CurrencyConverter/
 CurrencyConverter==0.16.7
 pandas==1.3.5
 ```
