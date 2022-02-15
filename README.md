@@ -45,7 +45,7 @@ report = IsraeliTaxReport(csv_name)
 
 ### [3] The 'form1325' method:
 Returns a Pandas dataframe corresponding to the Israeli tax form '1325'. Assumes that relevant data (buy & sell orders) is found in .csv used by class.
-if ```save_as_csv=True```, also saves the output as a .csv file that can be used (almost as is) in place of form '1325' for the yearly tax report. Read more about submitting the Israeli tax report [here](https://fintranslator.com/israel-tax-return-example-2019/). The 'official' form 1325 can be seen [here](https://www.gov.il/blobFolder/service/annual-tax-report-2019/he/Service_Pages_Income_tax_itc1325-2019.pdf).
+If ```save_as_csv=True```, also saves the output as a .csv file that can be used (almost as is) in place of form '1325' for the yearly tax report. Read more about submitting the Israeli tax report [here](https://fintranslator.com/israel-tax-return-example-2019/). The 'official' form 1325 can be seen [here](https://www.gov.il/blobFolder/service/annual-tax-report-2019/he/Service_Pages_Income_tax_itc1325-2019.pdf).
 ```Python
 form1325 = report.form1325(year='2021', save_as_csv=True)
 ```
