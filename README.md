@@ -7,7 +7,7 @@ Most of the attributes are Pandas dataframes. This class is not optimized for sp
 
 Read more about submitting the Israeli tax report (in Hebrew) [here](https://fintranslator.com/israel-tax-return-example-2019/).
 
-Requirements:
+#### Requirements:
 ```Python
 currency_converter==0.5.5
 CurrencyConverter==0.16.7
