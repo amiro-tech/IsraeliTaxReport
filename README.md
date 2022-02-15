@@ -56,7 +56,7 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ### [4] Attributes:
 The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
-self.keywords = {'trades': 'Trades',
+report.keywords = {'trades': 'Trades',
                  'stocks': 'Stocks',
               'dividends': 'Dividends',
                    'date': 'Date/Time',
