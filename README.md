@@ -52,3 +52,5 @@ form1325 = report.form1325(year='2021', save_as_csv=True)
 Example output dataframe (generated for ```sample_custom_statement.csv```):
 
 ![](imagesForREADME/image4.png)
+
+### [4] Attributes:
