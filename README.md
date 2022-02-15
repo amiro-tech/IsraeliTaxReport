@@ -3,6 +3,8 @@ This class is intended to assist with filling out an Israeli annual tax report f
     
 The main method, 'form1325', outputs the lines of form '1325', which is the main form used to report taxable trades (and is not trivial to generate directly from the broker report). The class has other useful attributes for the tax report, such as 'ustax_paid_df', which contain the taxes paid in the us (usually due to dividends).
 
+Most of the attributes are Pandas dataframes. This class is not optimized for speed but for ease of reading and submitting tax report data (ypically done once or twice a year).
+
 ## Instruction for using the IsraeliTaxReport class
 
 ### [1] Obtain the raw report from Interactive Brokers as a .csv file:
