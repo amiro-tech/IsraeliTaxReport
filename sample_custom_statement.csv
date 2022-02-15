@@ -1,0 +1,126 @@
+﻿Statement,Header,Field Name,Field Value
+Statement,Data,BrokerName,Interactive Brokers LLC
+Statement,Data,BrokerAddress,"Two Pickwick Plaza, Greenwich, CT 06830"
+Statement,Data,Title,Activity Statement
+Statement,Data,Period,"December 31, 2020 - December 31, 2021"
+Statement,Data,WhenGenerated,"2022-02-15, 12:17:43 EST"
+Trades,Header,DataDiscriminator,Asset Category,Currency,Symbol,Date/Time,Quantity,T. Price,C. Price,Proceeds,Comm/Fee,Basis,Realized P/L,MTM P/L,Code
+Trades,Data,Order,Stocks,USD,TSLA,"2021-11-03, 09:55:25",1,1183.71,1213.86,-1183.71,-1,1184.71,0,30.15,O
+Trades,Data,Order,Stocks,USD,TSLA,"2021-11-17, 10:20:20",2,1082.77,1089.01,-2165.54,-1,2166.54,0,12.48,O
+Trades,SubTotal,,Stocks,USD,TSLA,,3,,,-3349.25,-2,3351.25,0,42.63,
+Trades,Data,Order,Stocks,USD,VB,"2021-01-05, 09:30:00",4,191.11,194.27,-764.44,-1,765.44,0,12.64,O
+Trades,Data,Order,Stocks,USD,VB,"2021-06-03, 11:17:45",4,222.7,223.04,-890.8,-1,891.8,0,1.36,O
+Trades,Data,Order,Stocks,USD,VB,"2021-07-07, 10:12:41",2,222.6,222.36,-445.2,-1,446.2,0,-0.48,O
+Trades,Data,Order,Stocks,USD,VB,"2021-09-07, 10:05:05",4,228.75,226.84,-915,-1,916,0,-7.64,O
+Trades,Data,Order,Stocks,USD,VB,"2021-11-17, 10:27:04",2,235.5,235.28,-471,-1,472,0,-0.44,O
+Trades,Data,Order,Stocks,USD,VB,"2021-11-19, 09:49:13",2,233.54,232.09,-467.08,-1,468.08,0,-2.9,O
+Trades,SubTotal,,Stocks,USD,VB,,18,,,-3953.52,-6,3959.52,0,2.54,
+Trades,Data,Order,Stocks,USD,VEA,"2021-01-05, 09:54:47",17,47.7573,48.02,-811.8741,-1,812.8741,0,4.4659,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-03-03, 11:16:26",1,48.84,48.62,-48.84,-0.4884,49.3284,0,-0.22,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-04-06, 11:06:58",1,50.078,50.06,-50.078,-0.50078,50.57878,0,-0.018,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-06-03, 11:20:13",4,52.575,52.57,-210.3,-1,211.3,0,-0.02,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-07-07, 10:16:53",7,51.675,51.73,-361.725,-1,362.725,0,0.385,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-08-04, 13:20:29",17,52.33,52.25,-889.61,-1,890.61,0,-1.36,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-09-07, 10:09:17",2,53.38,53.3,-106.76,-1,107.76,0,-0.16,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-10-05, 10:18:35",1,50.4,50.46,-50.4,-0.505,50.905,0,0.06,O
+Trades,Data,Order,Stocks,USD,VEA,"2021-11-17, 10:43:16",93,52.325,52.35,-4866.225,-1,4867.225,0,2.325,O
+Trades,SubTotal,,Stocks,USD,VEA,,143,,,-7395.8121,-7.49418,7403.30628,0,5.4579,
+Trades,Data,Order,Stocks,USD,VGT,"2021-02-11, 09:55:28",4,376.64,378.48,-1506.56,-1,1507.56,0,7.36,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-03-03, 10:01:03",4,357.495,351.82,-1429.98,-1,1430.98,0,-22.7,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-05-05, 10:14:58",2,368.37,366.72,-736.74,-1,737.74,0,-3.3,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-06-03, 11:16:28",1,370.2,368.73,-370.2,-1,371.2,0,-1.47,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-09-07, 10:00:09",2,428.33,428.9,-856.66,-1,857.66,0,1.14,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-10-05, 10:07:56",2,400,402.72,-800,-1,801,0,5.44,O
+Trades,Data,Order,Stocks,USD,VGT,"2021-11-17, 10:46:58",2,452.3,451.57,-904.6,-1,905.6,0,-1.46,O
+Trades,SubTotal,,Stocks,USD,VGT,,17,,,-6604.74,-7,6611.74,0,-14.99,
+Trades,Data,Order,Stocks,USD,VPL,"2021-03-03, 09:58:45",18,81.66,81.31,-1469.88,-1,1470.88,0,-6.3,O
+Trades,Data,Order,Stocks,USD,VPL,"2021-10-01, 15:28:48",1,80.9995,80.88,-80.9995,-0.809995,81.809495,0,-0.1195,O
+Trades,Data,Order,Stocks,USD,VPL,"2021-10-05, 10:22:19",1,79.98,79.93,-79.98,-0.7998,80.7798,0,-0.05,O
+Trades,Data,Order,Stocks,USD,VPL,"2021-11-17, 10:19:18",-55,80.732,80.79,4440.26,-1.029190326,-4350.819295,88.411514,-3.19,C
+Trades,SubTotal,,Stocks,USD,VPL,,-35,,,2809.4005,-3.638985326,-2717.35,88.411514,-9.6595,
+Trades,Data,Order,Stocks,USD,VTI,"2021-01-05, 09:30:00",4,191.49,193.42,-765.96,-1,766.96,0,7.72,O
+Trades,Data,Order,Stocks,USD,VTI,"2021-04-06, 10:41:53",4,212.2,211.8,-848.8,-1,849.8,0,-1.6,O
+Trades,Data,Order,Stocks,USD,VTI,"2021-07-07, 10:14:12",2,224.888,225.08,-449.776,-1,450.776,0,0.384,O
+Trades,Data,Order,Stocks,USD,VTI,"2021-09-07, 10:03:57",4,233.595,233.28,-934.38,-1,935.38,0,-1.26,O
+Trades,Data,Order,Stocks,USD,VTI,"2021-11-17, 10:27:48",2,241.825,241.79,-483.65,-1,484.65,0,-0.07,O
+Trades,Data,Order,Stocks,USD,VTI,"2021-11-19, 09:50:20",2,242.1,241.48,-484.2,-1,485.2,0,-1.24,O
+Trades,SubTotal,,Stocks,USD,VTI,,18,,,-3966.766,-6,3972.766,0,3.934,
+Trades,Data,Order,Stocks,USD,VXUS,"2021-01-05, 09:46:28",13,60.995,61.4,-792.935,-1,793.935,0,5.265,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-02-04, 10:26:27",25,62.21,62.43,-1555.25,-1,1556.25,0,5.5,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-03-03, 10:07:48",2,62.6,62.5,-125.2,-1,126.2,0,-0.2,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-04-06, 11:04:32",10,63.9,63.88,-639,-1,640,0,-0.2,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-05-05, 10:16:44",3,64.57,64.81,-193.71,-1,194.71,0,0.72,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-06-03, 11:12:46",10,66.785,66.69,-667.85,-1,668.85,0,-0.95,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-07-07, 10:19:31",5,65.4,65.5,-327,-1,328,0,0.5,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-08-04, 13:18:09",15,65.615,65.58,-984.225,-1,985.225,0,-0.525,O
+Trades,Data,Order,Stocks,USD,VXUS,"2021-11-17, 10:37:48",-83,65.612,65.61,5445.796,-1.03765056,-5293.17,151.58835,0.166,C
+Trades,SubTotal,,Stocks,USD,VXUS,,0,,,160.626,-9.03765056,0,151.58835,10.276,
+Trades,Total,,Stocks,USD,,,,,,-22300.0616,-41.170815886,22581.23228,239.999864,40.1884, 
+Trades,Total,,Stocks,ILS,,,,,,-72357.30317006,-132.134523435,73227.797275442,738.359581596,122.70849994, 
+Trades,Header,DataDiscriminator,Asset Category,Currency,Symbol,Date/Time,Quantity,T. Price,,Proceeds,Comm in ILS,,,MTM in ILS,Code
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-01-05, 04:22:32","3,114",3.2093,,-9993.7602,-6.421,,,-27.0918,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-02-04, 10:03:46","3,040",3.2865,,-9990.96,-6.6002,,,6.992,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-03-03, 09:53:47","3,032",3.2961,,-9993.7752,-6.5968,,,43.3576,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-04-06, 10:37:18","1,515",3.2974,,-4995.561,-6.6216,,,-3.4845,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-05-05, 08:28:49",916,3.2667,,-2992.2972,-6.526,,,-1.6488,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-05-05, 23:21:48",-5,3.263,,16.315,0,,,0.027,L
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-06-03, 11:01:57","2,118",3.2571,,-6898.5378,-6.4942,,,-0.4236,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-06-07, 20:25:35",-2.57872,3.2448,,8.367430656,0,,,0.002321,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-07-07, 10:08:54","1,526",3.2719,,-4992.9194,-6.5504,,,0.4578,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-08-04, 13:00:53","1,865",3.2159,,-5997.6535,-6.4216,,,-4.6625,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-09-02, 10:04:11","2,802",3.2091,,-8991.8982,-6.4118,,,-11.208,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-10-05, 09:58:31",924,3.235,,-2989.14,-6.449,,,-2.31,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-10-07, 20:21:40",-4.829705,3.2271,,15.585941006,0,,,-0.031876,
+Trades,Data,Order,Forex,ILS,USD.ILS,"2021-11-03, 09:53:43","1,276",3.1339,,-3998.8564,-6.2688,,,-20.9264,
+Trades,SubTotal,,Forex,ILS,USD.ILS,,22115.591575,,,-71795.090528338,-71.3614,,,-20.950755,
+Trades,Total,,Forex,ILS,,,,,,-71795.090528338,-71.3614,,,-20.950755, 
+Dividends,Header,Currency,Date,Description,Amount
+Dividends,Data,USD,2021-03-25,VEA(US9219438580) Cash Dividend USD 0.2312 per Share (Ordinary Dividend),17.34
+Dividends,Data,USD,2021-03-25,VPL(US9220428661) Cash Dividend USD 0.1566 per Share (Ordinary Dividend),8.3
+Dividends,Data,USD,2021-03-25,VXUS(US9219097683) Cash Dividend USD 0.1553 per Share (Ordinary Dividend),6.21
+Dividends,Data,USD,2021-03-30,VB(US9229087518) Cash Dividend USD 0.5632 per Share (Ordinary Dividend),10.14
+Dividends,Data,USD,2021-03-30,VTI(US9229087690) Cash Dividend USD 0.6716 per Share (Ordinary Dividend),12.09
+Dividends,Data,USD,2021-03-31,VGT(US92204A7028) Cash Dividend USD 0.6292 per Share (Ordinary Dividend),5.03
+Dividends,Data,USD,2021-06-24,VEA(US9219438580) Cash Dividend USD 0.4135 per Share (Ordinary Dividend),33.08
+Dividends,Data,USD,2021-06-24,VPL(US9220428661) Cash Dividend USD 0.4952 per Share (Ordinary Dividend),26.25
+Dividends,Data,USD,2021-06-24,VXUS(US9219097683) Cash Dividend USD 0.5148 per Share (Ordinary Dividend),32.43
+Dividends,Data,USD,2021-06-29,VB(US9229087518) Cash Dividend USD 0.5554 per Share (Ordinary Dividend),12.22
+Dividends,Data,USD,2021-06-29,VGT(US92204A7028) Cash Dividend USD 0.5862 per Share (Ordinary Dividend),6.45
+Dividends,Data,USD,2021-06-29,VTI(US9229087690) Cash Dividend USD 0.6753 per Share (Ordinary Dividend),14.86
+Dividends,Data,USD,2021-09-23,VEA(US9219438580) Cash Dividend USD 0.20 per Share (Ordinary Dividend),21.2
+Dividends,Data,USD,2021-09-23,VPL(US9220428661) Cash Dividend USD 0.3634 per Share (Ordinary Dividend),19.26
+Dividends,Data,USD,2021-09-23,VXUS(US9219097683) Cash Dividend USD 0.3565 per Share (Ordinary Dividend),29.59
+Dividends,Data,USD,2021-09-29,VB(US9229087518) Cash Dividend USD 0.5862 per Share (Ordinary Dividend),16.41
+Dividends,Data,USD,2021-09-29,VTI(US9229087690) Cash Dividend USD 0.7242 per Share (Ordinary Dividend),20.28
+Dividends,Data,USD,2021-10-04,VGT(US92204A7028) Cash Dividend USD 0.8869 per Share (Ordinary Dividend),11.53
+Dividends,Data,USD,2021-12-21,VGT(US92204A7028) Cash Dividend USD 0.8212 per Share (Ordinary Dividend),13.96
+Dividends,Data,USD,2021-12-23,VEA(US9219438580) Cash Dividend USD 0.7693 per Share (Ordinary Dividend),153.86
+Dividends,Data,USD,2021-12-30,VB(US9229087518) Cash Dividend USD 1.0908 per Share (Ordinary Dividend),34.91
+Dividends,Data,USD,2021-12-30,VTI(US9229087690) Cash Dividend USD 0.8592 per Share (Ordinary Dividend),27.49
+Dividends,Data,Total,,,532.89
+Dividends,Data,Total in ILS,,,1705.871128
+Withholding Tax,Header,Currency,Date,Description,Amount,Code
+Withholding Tax,Data,USD,2021-03-25,VEA(US9219438580) Cash Dividend USD 0.2312 per Share - US Tax,-4.34,
+Withholding Tax,Data,USD,2021-03-25,VPL(US9220428661) Cash Dividend USD 0.1566 per Share - US Tax,-2.08,
+Withholding Tax,Data,USD,2021-03-25,VXUS(US9219097683) Cash Dividend USD 0.1553 per Share - US Tax,-1.55,
+Withholding Tax,Data,USD,2021-03-30,VB(US9229087518) Cash Dividend USD 0.5632 per Share - US Tax,-2.54,
+Withholding Tax,Data,USD,2021-03-30,VTI(US9229087690) Cash Dividend USD 0.6716 per Share - US Tax,-3.02,
+Withholding Tax,Data,USD,2021-03-31,VGT(US92204A7028) Cash Dividend USD 0.6292 per Share - US Tax,-1.26,
+Withholding Tax,Data,USD,2021-06-24,VEA(US9219438580) Cash Dividend USD 0.4135 per Share - US Tax,-8.27,
+Withholding Tax,Data,USD,2021-06-24,VPL(US9220428661) Cash Dividend USD 0.4952 per Share - US Tax,-6.56,
+Withholding Tax,Data,USD,2021-06-24,VXUS(US9219097683) Cash Dividend USD 0.5148 per Share - US Tax,-8.11,
+Withholding Tax,Data,USD,2021-06-29,VB(US9229087518) Cash Dividend USD 0.5554 per Share - US Tax,-3.06,
+Withholding Tax,Data,USD,2021-06-29,VGT(US92204A7028) Cash Dividend USD 0.5862 per Share - US Tax,-1.61,
+Withholding Tax,Data,USD,2021-06-29,VTI(US9229087690) Cash Dividend USD 0.6753 per Share - US Tax,-3.72,
+Withholding Tax,Data,USD,2021-09-23,VEA(US9219438580) Cash Dividend USD 0.20 per Share - US Tax,-5.3,
+Withholding Tax,Data,USD,2021-09-23,VPL(US9220428661) Cash Dividend USD 0.3634 per Share - US Tax,-4.82,
+Withholding Tax,Data,USD,2021-09-23,VXUS(US9219097683) Cash Dividend USD 0.3565 per Share - US Tax,-7.4,
+Withholding Tax,Data,USD,2021-09-29,VB(US9229087518) Cash Dividend USD 0.5862 per Share - US Tax,-4.1,
+Withholding Tax,Data,USD,2021-09-29,VTI(US9229087690) Cash Dividend USD 0.7242 per Share - US Tax,-5.07,
+Withholding Tax,Data,USD,2021-10-04,VGT(US92204A7028) Cash Dividend USD 0.8869 per Share - US Tax,-2.88,
+Withholding Tax,Data,USD,2021-12-21,VGT(US92204A7028) Cash Dividend USD 0.8212 per Share - US Tax,-3.49,
+Withholding Tax,Data,USD,2021-12-23,VEA(US9219438580) Cash Dividend USD 0.7693 per Share - US Tax,-38.47,
+Withholding Tax,Data,USD,2021-12-30,VB(US9229087518) Cash Dividend USD 1.0908 per Share - US Tax,-8.73,
+Withholding Tax,Data,USD,2021-12-30,VTI(US9229087690) Cash Dividend USD 0.8592 per Share - US Tax,-6.87,
+Withholding Tax,Data,Total,,,-133.25,
+Withholding Tax,Data,Total in ILS,,,-426.557493,
