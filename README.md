@@ -4,7 +4,7 @@
 
 ![](imagesForREADME/image1.png)
 
-* Create a **Custom Report**
+* Create a **Custom Statement**
 
 ![](imagesForREADME/image2.png)
 
