@@ -42,7 +42,8 @@ report = IsraeliTaxReport(csv_name)
 ```
 
 ### [3] The 'form1325' method:
-Applies
+Returns a Pandas dataframe corresponding to the Israeli tax form '1325'. Assumes that relevant data (buy & sell orders) is found in .csv used by class.
+if ```Python sace_as_csv=True```, 
 ```Python
 form1325 = report.form1325(year='2021', save_as_csv=True)
 ```
