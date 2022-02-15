@@ -6,3 +6,5 @@
 
 * Create a **Custom Report**
 
+![](imagesForREADME/image2.png)
+
