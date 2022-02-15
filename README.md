@@ -33,7 +33,7 @@ csv_name = 'custom_statement.csv'  # This is the custom statement generated in I
 report = IsraeliTaxReport(csv_name)
 ```
 
-### The 'form1325' method:
+### [3] The 'form1325' method:
 ```Python
 form1325 = report.form1325(year='2021', save_as_csv=True)
 ```
