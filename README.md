@@ -18,9 +18,11 @@
 * Now you can run the statement, which is saved under **Custom Statements**.
 
 ### [2] To use the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
-'''Python
+'''
+
 file_name = '
 from IsraeliTaxReport import IsraeliTaxReport
 report2021 = IsraeliTaxReport
+
 '''
 
