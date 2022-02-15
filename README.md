@@ -54,7 +54,7 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ![](imagesForREADME/image4.png)
 
 ### [4] Attributes:
-
+The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
 self.keywords = {'trades': 'Trades',
                  'stocks': 'Stocks',
