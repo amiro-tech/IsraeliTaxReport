@@ -8,3 +8,5 @@
 
 ![](imagesForREADME/image2.png)
 
+* Under **Sections**, choosing the following is currently sufficient: 
+
