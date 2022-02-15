@@ -18,6 +18,7 @@
 * Now you can run the statement, which is saved under **Custom Statements**.
 
 ### [2] To use the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
+
 '''
 
 file_name = '
