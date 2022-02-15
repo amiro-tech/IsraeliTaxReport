@@ -17,13 +17,11 @@
 * **Delivery Configurations** - choose Format: CSV, Period: Daily, Language: English.
 * Now you can run the statement, which is saved under **Custom Statements**.
 
-### [2] To use the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
+### [2] To instantiate the IsraeliTaxReport class (in the same directory as IsraeliTaxReport.py):
 
 ```
-
-file_name = '
+csv_name = 'custom_statement.csv'  # This is the custom statement generated in Interactive Brokers
 from IsraeliTaxReport import IsraeliTaxReport
-report2021 = IsraeliTaxReport
-
+report = IsraeliTaxReport(csv_name)
 ```
 
