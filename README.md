@@ -54,3 +54,19 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ![](imagesForREADME/image4.png)
 
 ### [4] Attributes:
+
+```Python
+self.keywords = {'trades': 'Trades',
+                 'stocks': 'Stocks',
+              'dividends': 'Dividends',
+                   'date': 'Date/Time',
+                 'symbol': 'Symbol',
+               'quantity': 'Quantity',
+                  'basis': 'Basis',
+             'asset type': 'Asset Category',
+              'data type': 'DataDiscriminator',
+            'US tax paid': 'Withholding Tax',
+                  'order': 'Order',
+            'cash report': 'Cash Report',
+                 'amount': 'Amount'}
+```
