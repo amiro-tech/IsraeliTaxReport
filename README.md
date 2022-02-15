@@ -12,6 +12,6 @@
 
 ![](imagesForREADME/image3.png)
 
-* ***Section Configurations*** can be left as the default
-* ***Delivery Configurations*** - choose Format: CSV, Period: Daily, Language: English.
+* **Section Configurations** can be left as the default
+* **Delivery Configurations** - choose Format: CSV, Period: Daily, Language: English.
 
