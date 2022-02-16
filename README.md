@@ -60,7 +60,7 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 ![](imagesForREADME/image4.png)
 
 ### [4] The 'get_from_csv' (static) method:
-Returns all the lines from a .csv file (csv_name) that contain the words given in a list (match) and does not contain the words given in another list (exclude). The output is a list of lists, where the nested lists are the rows of interest. This method is useful for fetching any data from the input .csv file, for example:
+Returns all the lines from a .csv file (```csv_name```) that contain the words given in a list (```match```) and does not contain the words given in another list (```exclude```). If ```match_all=True```, each line has to match all of the words in ```match```. The output is a list of lists, where the nested lists are the rows of interest. This method is useful for fetching any data from the input .csv file, for example:
 ```Python
 dividends = report.get_from_csv(csv_name=self.csv_name,
                               match=[report.keywords['dividends']], 
