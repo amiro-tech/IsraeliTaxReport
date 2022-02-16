@@ -90,14 +90,14 @@ report.keywords = {'trades': 'Trades',
 
 * The [Currency Converter](https://pypi.org/project/CurrencyConverter/) is used for conversion between USD and ILS. ```report.converter``` is an instance of this class.
 
-* By default, ```report.forex = 'USD'``` and ```report.base_currency = 'ILS'```.
+* By default, ```forex = 'USD'``` and ```base_currency = 'ILS'```.
 
 #### Instance Variables:
-* ```report.trades_df```, ```report.stocks_df```,  ```report.stock_sells_df```, and ```report.stock_buys_df``` are dataframes cotaining all trades, stock trades, stock sell orders, and stock buy orders, respectively. For example, for ```sample_custom_statement.csv```, the output dataframe of ```report.stock_sells_df``` is
+* ```trades_df```, ```stocks_df```,  ```stock_sells_df```, and ```stock_buys_df``` are dataframes cotaining all trades, stock trades, stock sell orders, and stock buy orders, respectively. For example, for ```sample_custom_statement.csv```, the output dataframe of ```report.stock_sells_df``` is
 
 ![](imagesForREADME/image5.png)
 
-* All individual dividend payments, ```report.dividends_df```, and taxes paid for them, ```ustax_paid_df```, nicely formatted as data frames. This is required to fill [form '1324'](https://www.gov.il/BlobFolder/service/annual-tax-report-2019/he/Service_Pages_Income_tax_itc1324-2019.pdf).
+* All individual dividend payments, ```dividends_df```, and taxes paid for them, ```ustax_paid_df```, nicely formatted as data frames. This is required to fill [form '1324'](https://www.gov.il/BlobFolder/service/annual-tax-report-2019/he/Service_Pages_Income_tax_itc1324-2019.pdf).
 ```Python
 
 ```
