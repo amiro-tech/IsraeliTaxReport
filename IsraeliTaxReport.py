@@ -240,9 +240,9 @@ class IsraeliTaxReport:
         # keep only sells in the tax year 'year'
         form1325_df = form1325_df.loc[(form1325_df['תאריך המכירה'] >= year + '-01-01') &
                                       (form1325_df['תאריך המכירה'] <= year + '-12-31')]
-        # sort sell dates in accending order
+        # sort sell dates in ascending order
         form1325_df.sort_values(by='תאריך המכירה')
-        # covert all dates from Y-m-d to Israeli format d-m-Y
+        # convert all dates from Y-m-d to Israeli format d-m-Y
         form1325_df['תאריך הרכישה'] = form1325_df['תאריך הרכישה'].str.split('-').str[::-1].str.join('-')
         form1325_df['תאריך המכירה'] = form1325_df['תאריך המכירה'].str.split('-').str[::-1].str.join('-')
         # save output form as .csv
