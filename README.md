@@ -59,7 +59,10 @@ Example output dataframe (generated for ```sample_custom_statement.csv```):
 
 ![](imagesForREADME/image4.png)
 
-### [4] Attributes:
+### [4] The 'get_from_csv' (static) method:
+
+
+### [5] Attributes:
 #### Class Variables:
 * The values of the ```keywords``` dictionary can be changed to fit the format of .csv statements provided by other brokers.
 ```Python
