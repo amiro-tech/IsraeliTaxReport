@@ -36,7 +36,7 @@ Since most of the attributes are visual dataframes, it is nice to use the class 
 
 * Now you can run the statement, which is saved under **Custom Statements**.
 
-* **ATTENTION:** Custom statements on Interactive Brokers can be generated for a maximum period of 1 year. However, this might not be sufficient for the calculation of form '1325' for the tax year of interest, as stocks bought on another year may have been sold. In such a case, you may need to combine several .csv files to obtain all the data needed. Otherwise, the report will still be generated, but include only partial data. To understant more, read about the [FIFO method](https://www.investopedia.com/terms/a/averagecostbasismethod.asp#:~:text=FIFO,purchasing%2030%20shares%20in%20April.) for calculating returns and losses from selling stocks.
+* **ATTENTION:** Custom statements on Interactive Brokers can be generated for a maximum period of 1 year. However, this might not be sufficient for the calculation of form 1325 for the tax year of interest, as stocks bought on another year may have been sold. In such a case, you may need to combine several .csv files to obtain all the data needed. Otherwise, the report will still be generated, but include only partial data. To understant more, read about the [FIFO method](https://www.investopedia.com/terms/a/averagecostbasismethod.asp#:~:text=FIFO,purchasing%2030%20shares%20in%20April.) for calculating returns and losses from selling stocks.
 
 * The sample statement provided in this repository, ```sample_custom_statement.csv```, is used in the following.
 
