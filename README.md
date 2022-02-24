@@ -15,7 +15,7 @@ pandas==1.3.5
 ```
 
 ## Instructions for using the IsraeliTaxReport class
-Since most of the attributes are visual dataframes, it is nice to use the class interactively, e.g. in a Jupyter notebook.
+Since most of the attributes are visual dataframes, it is nice to use the class interactively, e.g. in a Jupyter notebook. You can use ```sample_notebook.ipynb``` to conveniently try the ```IsraeliTaxReport``` class, as describd in the following.
 
 ### [1] Obtain the raw data from Interactive Brokers as a .csv file:
 * On your Interactive Brokers page, go to **Performance & Statements** and under **Reports**, choose **Statements**
