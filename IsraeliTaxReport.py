@@ -247,6 +247,6 @@ class IsraeliTaxReport:
         form1325_df['תאריך המכירה'] = form1325_df['תאריך המכירה'].str.split('-').str[::-1].str.join('-')
         # save output form as .csv
         if save_as_csv:
-            form1325[form1325.columns[::-1]].to_csv('form1325_' + year + '.csv',
+            form1325_df[form1325_df.columns[::-1]].to_csv('form1325_' + year + '.csv',
                                                     index=False, encoding='utf-8-sig')
         return form1325_df
