@@ -128,7 +128,21 @@ class IsraeliTaxReport:
                     data.append(row)
         return data
         
-    def apply_fifo(self, row_count, symbol: str, buys, sells, form_dict):
+    def apply_fifo(self, row_count: int, symbol: str, buys, sells, form_dict: dict):
+        """
+        Apply the FIFO logic to calculate rows of the Israeli tax form '1325'
+        for a specific stock
+        
+            Parameters:
+                row_count (int): row number in output form
+                symbol (str): unique symbol of specific stock
+                buys (dataframe): buys of specific stock 'symbol'
+                sells (dataframe): sells of specific stock 'symbol'
+                form_dict (dict): form dictionary
+
+            Returns:
+                Upadted row number (row_count) and form dictionary (form_dict)
+        """
         for sell in sells.iterrows():
             # initialize number of stocks accounted for
             tot_quant_buys = 0
