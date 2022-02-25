@@ -162,7 +162,7 @@ class IsraeliTaxReport:
                 
         return row_count, form_dict         
         
-    def calculate_row1325(self, buy, sell, quant_buy: int, quant_sell: int, round=True):
+    def calculate_row1325(self, buy, sell, quant_buy: int, quant_sell: int, round_vals=True):
         """
         Calculates a row of the Israeli tax form '1325'
         
@@ -213,7 +213,7 @@ class IsraeliTaxReport:
         row = [pre_hrs, quant_buy, sold_for_usd, buy_date, cost_usd, cost_ils,
                rate_change, adj_cost_ils, sell_date, sold_for_ils, real_return, real_loss]
         # round number entries in row
-        if round:
+        if round_vals:
             for i in range(len(row)):
                 if type(row[i]) == float or type(row[i]) == int:
                     row[i] = round(row[i], 3)
