@@ -159,8 +159,9 @@ class IsraeliTaxReport:
                     buys = buys.iloc[1:, :]
                 # update number of stocks accounted for
                 tot_quant_buys += quant_buy
-        print(form_dict)
-        return row_count, form_dict         
+        #print(form_dict)
+        #return row_count, form_dict
+        return form_dict
         
     def calculate_row1325(self, buy, sell, quant_buy: int, quant_sell: int, round_vals=True):
         """
@@ -246,7 +247,7 @@ class IsraeliTaxReport:
             # sells of specific stock 'symbol'
             sells = all_sells.loc[all_sells[self.keywords['symbol']] == symbol]
             
-            row_count, form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
+            form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
                       
         form1325_df = pd.DataFrame(form_dict)
         # keep only sells in the tax year 'year'
