@@ -128,7 +128,7 @@ class IsraeliTaxReport:
                     data.append(row)
         return data
         
-    def apply_fifo(self, row_count, symbol: str, buys, sells, form_dict: dict):
+    def apply_fifo(self, row_count, symbol: str, buys, sells, form_dict):
         for sell in sells.iterrows():
             # initialize number of stocks accounted for
             tot_quant_buys = 0
