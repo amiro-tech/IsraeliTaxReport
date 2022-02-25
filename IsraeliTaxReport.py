@@ -148,7 +148,7 @@ class IsraeliTaxReport:
                 else:
                     partial = False
                 # generate row    
-                row = [row_count, symbol].extend(self.calculate_row1325(buy, sell, quant_buy, quant_sell))
+                row = [row_count, symbol] + self.calculate_row1325(buy, sell, quant_buy, quant_sell)
                 print(row)
                 # add row to the form dictionary
                 for key, val in zip(form_dict.keys(), row):
@@ -160,9 +160,8 @@ class IsraeliTaxReport:
                     buys = buys.iloc[1:, :]
                 # update number of stocks accounted for
                 tot_quant_buys += quant_buy
-        #print(form_dict)
-        #return row_count, form_dict
-        return form_dict
+                
+        return row_count, form_dict
         
     def calculate_row1325(self, buy, sell, quant_buy: int, quant_sell: int, round_vals=True):
         """
@@ -219,7 +218,6 @@ class IsraeliTaxReport:
             for i in range(len(row)):
                 if type(row[i]) == float or type(row[i]) == int:
                     row[i] = round(row[i], 3)
-        print(row)
         return row
         
     def form1325(self, year: str, save_as_csv=False):
@@ -249,7 +247,7 @@ class IsraeliTaxReport:
             # sells of specific stock 'symbol'
             sells = all_sells.loc[all_sells[self.keywords['symbol']] == symbol]
             
-            form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
+            row_count, form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
                       
         form1325_df = pd.DataFrame(form_dict)
         # keep only sells in the tax year 'year'
