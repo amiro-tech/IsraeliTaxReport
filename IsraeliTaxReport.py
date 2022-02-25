@@ -127,24 +127,6 @@ class IsraeliTaxReport:
                 elif match_logic & exclude_logic:
                     data.append(row)
         return data
-    
-    def partial_sell(self, quant_buy: int, quant_sell: int, tot_quant_buys: int):
-        """
-        Determines if there was a partial sell of the buy
-        
-            Parameters:
-                quant_buy (int): quantity (number of stocks) of current buy
-                quant_sell (int): number of stocks sold in 'sell'
-                tot_quant_buys (int): number of stocks accounted for
-
-            Returns:
-                True if the sale is partial, False otherwise
-        """
-        if quant_buy > quant_sell - tot_quant_buys:
-            quant_buy = quant_sell - tot_quant_buys
-            return True
-        else:
-            return False
         
     def apply_fifo(self, row_count, symbol: str, buys, sells, form_dict: dict):
         for sell in sells.iterrows():
