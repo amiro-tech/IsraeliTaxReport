@@ -259,9 +259,9 @@ class IsraeliTaxReport:
             buys = all_buys.loc[all_buys[self.keywords['symbol']] == symbol]
             # sells of specific stock 'symbol'
             sells = all_sells.loc[all_sells[self.keywords['symbol']] == symbol]
-            
+            # update row count and form dictionary
             row_count, form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
-                      
+        # convert form into a dataframe         
         form1325_df = pd.DataFrame(form_dict)
         # keep only sells in the tax year 'year'
         form1325_df = form1325_df.loc[(form1325_df['תאריך המכירה'] >= year + '-01-01') &
