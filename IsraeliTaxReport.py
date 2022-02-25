@@ -163,7 +163,6 @@ class IsraeliTaxReport:
                     partial = False
                 # generate row    
                 row = [row_count, symbol] + self.calculate_row1325(buy, sell, quant_buy, quant_sell)
-                print(row)
                 # add row to the form dictionary
                 for key, val in zip(form_dict.keys(), row):
                     form_dict[key].append(val)
