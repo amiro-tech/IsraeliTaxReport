@@ -183,7 +183,7 @@ class IsraeliTaxReport:
         buy_date = buy[self.keywords['date']].values[0]
         buy_date = buy_date.split(',')[0]  # keep only date (with IB format)
         # date this batch was sold
-        sell_date = sell[1][self.keywords['date']].values[0]
+        sell_date = sell[1][self.keywords['date']]
         sell_date = sell_date.split(',')[0]  # keep only date (with IB format)
         # conversion rate (1 USD in ILS) when bought
         rate_buy = self.converter.convert(1, self.forex, self.base_currency,
