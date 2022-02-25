@@ -218,6 +218,7 @@ class IsraeliTaxReport:
             for i in range(len(row)):
                 if type(row[i]) == float or type(row[i]) == int:
                     row[i] = round(row[i], 3)
+        print(row)
         return row
         
     def form1325(self, year: str, save_as_csv=False):
