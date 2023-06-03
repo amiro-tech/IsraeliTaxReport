@@ -157,33 +157,36 @@ class IsraeliTaxReport:
                 quant_buy = int(buy[self.keywords['quantity']])
                 # in case of partial sell of the buy
                 if quant_buy > quant_sell - tot_quant_buys:
-                    quant_buy = quant_sell - tot_quant_buys
+                    quant_buy_effective = quant_sell - tot_quant_buys
                     partial = True
                 else:
+                    quant_buy_effective = quant_buy
                     partial = False
                 # generate row    
-                row = [row_count, symbol] + self.calculate_row1325(buy, sell, quant_buy, quant_sell)
+                row = [row_count, symbol] + self.calculate_row1325(buy, sell, quant_buy, quant_buy_effective, quant_sell)
                 # add row to the form dictionary
                 for key, val in zip(form_dict.keys(), row):
                     form_dict[key].append(val)
                 # update or remove buy (already accounted for)
                 if partial:
-                    buys.iloc[0, :][self.keywords['quantity']] -= quant_buy
+                    buys.loc[0, self.keywords['quantity']] = int(buys[self.keywords['quantity']].values[0]) - quant_buy_effective
                 else:
                     buys = buys.iloc[1:, :]
+                    buys = buys.reset_index(drop=True)
                 # update number of stocks accounted for
-                tot_quant_buys += quant_buy
+                tot_quant_buys += quant_buy_effective
                 
         return row_count, form_dict
         
-    def calculate_row1325(self, buy, sell, quant_buy: int, quant_sell: int, round_vals=True):
+    def calculate_row1325(self, buy, sell, quant_buy: int, quant_buy_effective: int, quant_sell: int, round_vals=True):
         """
         Calculates a row of the Israeli tax form '1325'
         
             Parameters:
                 buy (dataframe): currnet processed buy
                 sell (dataframe): sell of specific stock
-                quant_buy (int): quantity (number of stocks) of current buy
+                quant_buy (int): quantity (number of stocks) of actual buy
+                quant_buy_effective (int): quantity (number of stocks) of current buy
                 quant_sell (int): number of stocks sold in 'sell'
 
             Returns:
@@ -192,7 +195,7 @@ class IsraeliTaxReport:
         # pre-market hours? (empty in normal trading)
         pre_hrs = ''
         # sell total price for batch in USD
-        sold_for_usd = (quant_buy / quant_sell) * abs(float(sell[1][self.keywords['basis']]))
+        sold_for_usd = (quant_buy_effective / quant_sell) * abs(float(sell[1]['Proceeds']) + float(sell[1]['Comm/Fee'])) 
         # date this batch was bought
         buy_date = buy[self.keywords['date']].values[0]
         buy_date = buy_date.split(',')[0]  # keep only date (with IB format)
@@ -206,7 +209,8 @@ class IsraeliTaxReport:
         rate_sell = self.converter.convert(1, self.forex, self.base_currency,
                                            datetime.strptime(sell_date, '%Y-%m-%d'))
         # cost in USD of batch
-        cost_usd = (min(quant_buy, quant_sell) / quant_buy) * float(buy[self.keywords['basis']])
+        cost_usd = (quant_buy_effective / quant_sell) * abs(float(sell[1][self.keywords['basis']]))
+        # cost_usd = (min(quant_buy_effective, quant_sell) / quant_buy) * float(buy[self.keywords['basis']])
         # cost in ILS of batch
         cost_ils = rate_buy * cost_usd
         # relative change in conversion rate from sell to buy
@@ -224,7 +228,7 @@ class IsraeliTaxReport:
             real_return = ''
             real_loss = min(max(sold_for_ils - adj_cost_ils, sold_for_ils - cost_ils), 0)
         # row to be added to form '1325'
-        row = [pre_hrs, quant_buy, sold_for_usd, buy_date, cost_usd, cost_ils,
+        row = [pre_hrs, quant_buy_effective, sold_for_usd, buy_date, cost_usd, cost_ils,
                rate_change, adj_cost_ils, sell_date, sold_for_ils, real_return, real_loss]
         # round number entries in row
         if round_vals:
@@ -250,15 +254,15 @@ class IsraeliTaxReport:
         form_dict = copy.deepcopy(self.form1325dict)
         row_count = 0
         # copies of all buy & sell orders
-        all_buys = self.stock_buys_df.reset_index()
-        all_sells = self.stock_sells_df.reset_index()
+        all_buys = self.stock_buys_df.reset_index(drop=True)
+        all_sells = self.stock_sells_df.reset_index(drop=True)
         # unique symbols of sold stocks, e.g. ['TSLA', 'VTI']
         symbols = all_sells[self.keywords['symbol']].unique()
         for symbol in symbols:
             # buys of specific stock 'symbol'
-            buys = all_buys.loc[all_buys[self.keywords['symbol']] == symbol]
+            buys = all_buys.loc[all_buys[self.keywords['symbol']] == symbol].reset_index(drop=True)
             # sells of specific stock 'symbol'
-            sells = all_sells.loc[all_sells[self.keywords['symbol']] == symbol]
+            sells = all_sells.loc[all_sells[self.keywords['symbol']] == symbol].reset_index(drop=True)
             # update row count and form dictionary
             row_count, form_dict = self.apply_fifo(row_count, symbol, buys, sells, form_dict)
         # convert form into a dataframe         
